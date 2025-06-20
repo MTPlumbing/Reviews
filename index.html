@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      background: #0a2342;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    .title {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .pipe {
+      width: 150px;
+      height: 300px;
+      border: 10px solid #fff;
+      border-bottom: none;
+      border-radius: 20px 20px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .water {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: #00b4d8;
+      animation: fill 6s linear forwards;
+    }
+    .logo-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+    .logo {
+      width: 120px;
+      opacity: 0;
+      animation: fadeInOut 3s 1.5s ease-in-out forwards;
+    }
+    .wrench {
+      width: 50px; 
+      margin-top: 20px;
+      opacity: 0;
+      animation: 
+        toolAppear 1.5s 3s ease-out forwards,
+        toolFloat 2s 4.5s ease-in-out infinite;
+    }
+    @keyframes fill {
+      0% { height: 0%; }
+      100% { height: 100%; }
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      20% { opacity: 1; transform: translateY(0); }
+      80% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+    @keyframes toolAppear { 
+      0% { opacity: 0; transform: rotate(-30deg) scale(0.5); }
+      100% { opacity: 1; transform: rotate(0deg) scale(1); }
+    }
+    
+    @keyframes toolFloat { 
+      0%, 100% { transform: translateY(0) rotate(5deg); }
+      50% { transform: translateY(-10px) rotate(-5deg); }
+    }
+    @media (max-width: 768px) {
+      .pipe {
+        width: 70vw;  
+        height: 140vw; 
+        max-width: none; 
+        max-height: none;
+      }
+      
+      .logo {
+        width: 40vw; 
+      }
+      
+      .wrench {
+        width: 20vw; 
+        min-width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Leave us a review!s</h1>
+  <div class="pipe">
+    <div class="water"></div>
+    <div class="logo-container">
+      <img src="mtp.png" class="logo" alt="Montauk Plumbing Logo">
+      <svg class="wrench" xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008Z" />
+      </svg>
+
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://g.page/r/Cay_zHH6twYYEAE/review";
+    }, 6000);
+  </script>
+</body>
+</html>
